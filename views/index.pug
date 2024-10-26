@@ -1,0 +1,31 @@
+extends layouts/layout
+
+block content
+  .d-flex.SideNav.border
+    include partials/top-tab
+  main.d-flex.flex-items-flex-start
+    nav.SideNav.border
+      include partials/side-tab
+    h2.flex-1 All Articles
+      .article-list
+      include partials/list
+  footer
+    //- h2 Add a New Article
+    //- form(
+    //-   method="post"
+    //-   action="/articles"
+    //-   hx-target=".article-list"
+    //-   hx-push-url="false"
+    //- )
+    //-   input.form-control(
+    //-     type="text" 
+    //-     name="name" 
+    //-     placeholder="Article Name" 
+    //-     required
+    //-   )
+    //-   textarea.form-control(
+    //-     name="body" 
+    //-     placeholder="Article Body" 
+    //-     required
+    //-   )
+    //-   button.btn.btn-outline(type="submit") Add Article  

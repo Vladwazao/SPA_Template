@@ -1,0 +1,25 @@
+doctype html
+html(
+  data-color-mode="dark" 
+  data-dark-theme="dark_dimmed"
+)
+  head
+    title #{title}
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    )
+    link(rel="stylesheet", href="/styles.css")
+    link(href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet")
+    script(src="https://unpkg.com/htmx.org@1.9.12")
+  body(
+    hx-boost="true"
+    hx-indicator=".loader"
+  )
+    header.Header
+      nav
+        img(src="/shuriken.png")
+        h1.Header-item.Header-item--full The Dojo Chronicles
+    div(hx-history-elt)
+      block content
+    include ../partials/loader
